@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计时器</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .records-container {
+            margin-top: 2rem;
+        }
+        .records-list {
+            margin: 1rem 0;
+        }
+        .record-item {
+            padding: 0.5rem;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .record-display {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .stats {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        .stats h3 {
+            margin-top: 0;
+        }
+        .stats p {
+            margin: 0.5rem 0;
+        }
+        #pagination {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        #pagination button {
+            padding: 0.5rem 1rem;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        #pagination button:hover {
+            background-color: #f8f9fa;
+        }
+        #pagination button:disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+        #pagination button.active {
+            background-color: #007bff;
+            color: white;
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="timer-container">
+        <h1>DO计时器</h1>
+         <p><a href="docs.html" target="_blank">查看使用说明</a></p>
+        <div class="button-group">
+            <button id="addRecord">记录时间</button>
+            <button id="exportRecords">导出记录</button>
+        </div>
+        
+        <div id="recordsContainer" class="records-container">
+            <h2>记录列表</h2>
+            <div id="recordsList" class="records-list"></div>
+            <div id="pagination"></div>
+            
+            <div class="stats">
+                <h3>统计信息</h3>
+                <p>总记录数: <span id="totalRecords">0</span></p>
+                <p>最早记录: <span id="earliestRecord">无</span></p>
+                <p>最近记录: <span id="latestRecord">无</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>编辑时间</h2>
+            <input type="date" id="editDate">
+            <input type="time" id="editTime">
+            <button id="saveEdit">保存</button>
+            <button id="cancelEdit">取消</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

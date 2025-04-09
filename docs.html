@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用说明 - DO计时器</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .docs-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        h1, h2, h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="docs-container">
+        <h1>纯 HTML/CSS/JS 离线计时器应用</h1>
+
+        <h2>核心功能</h2>
+        <ul>
+            <li>记录时间：点击"记录时间"按钮记录当前日期和时间</li>
+            <li>编辑记录：修改已有时间记录</li>
+            <li>删除记录：立即删除不需要的记录</li>
+            <li>导出记录：将所有记录导出为 JSON 文件</li>
+        </ul>
+
+        <h2>技术特点</h2>
+        <ul>
+            <li>🛠️ 离线工作：完全离线运行，无需网络连接</li>
+            <li>💾 本地存储：使用 IndexedDB 永久保存数据</li>
+            <li>📱 响应式设计：适配手机和电脑屏幕</li>
+            <li>⚡ 纯前端：原生 HTML/CSS/JS 开发</li>
+            <li>📦 无依赖：不依赖任何外部库</li>
+        </ul>
+
+        <h2>使用方法</h2>
+        <h3>记录时间</h3>
+        <ol>
+            <li>点击"记录时间"按钮</li>
+            <li>自动记录当前日期和时间</li>
+        </ol>
+
+        <h3>编辑记录</h3>
+        <ol>
+            <li>点击记录旁的"编辑"按钮</li>
+            <li>在模态框中修改日期时间</li>
+            <li>点击"保存"或"取消"</li>
+        </ol>
+
+        <h3>删除记录</h3>
+        <ol>
+            <li>点击记录旁的"删除"按钮</li>
+            <li>记录立即永久删除</li>
+        </ol>
+
+        <h3>导出记录</h3>
+        <ol>
+            <li>点击"导出记录"按钮</li>
+            <li>自动下载包含所有记录的 JSON 文件</li>
+        </ol>
+
+        <h2>文件结构</h2>
+        <pre>
+├── index.html # 主页面文件
+├── styles.css # 样式文件
+└── app.js # 主要业务逻辑
+        </pre>
+
+        <h2>优势</h2>
+        <ul>
+            <li>🚫 无需网络连接</li>
+            <li>🔒 数据永久本地存储</li>
+            <li>🖱️ 直观的交互界面</li>
+            <li>🌐 跨浏览器支持</li>
+            <li>🪶 仅 3 个文件（总大小 < 50KB）</li>
+        </ul>
+
+        <h2>使用场景</h2>
+        <ul>
+            <li>⏰ 工作时间追踪</li>
+            <li>📅 会议时间记录</li>
+            <li>📚 学习时长统计</li>
+            <li>⏱️ 任何需要精确记录时间的场景</li>
+        </ul>
+
+        <h2>特别说明</h2>
+        <ol>
+            <li>数据存储在浏览器 IndexedDB 中</li>
+            <li>数据永久保存直至手动删除</li>
+            <li>导出文件可用于备份/分享</li>
+        </ol>
+
+        <h2>快速开始</h2>
+        <ol>
+            <li>双击打开 <code>index.html</code></li>
+            <li>点击"记录时间"开始使用</li>
+            <li>所有操作均可100%离线完成</li>
+        </ol>
+
+        <p>提示：建议使用 Chrome/Firefox/Safari 等现代浏览器</p>
+    </div>
+</body>
+</html>
